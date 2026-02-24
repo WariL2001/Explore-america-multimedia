@@ -23,9 +23,39 @@
 </nav>
 
 <main>
-    <section>
+    <section class="hero-video">
+        <video autoplay muted loop controls>
+            <source src="media/video/seattle.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    
+    <section class="city-description">
         <h2>Explore Seattle, Washington</h2>
-        <p>Find the perfect destination based on your travel style.</p>
+        <p>Seattle is known for its skyline, coffee culture, and beautiful waterfront views.</p>
+    </section>
+    
+    <section class="gallery">
+        <h3>Top Attractions</h3>
+        <div class="gallery-grid">
+            <img src="media/images/space-needle.jpg" alt="Space Needle Seattle">
+            <img src="media/images/pike-place.jpg" alt="Pike Place Market">
+            <img src="media/images/seattle-waterfront.jpg" alt="Seattle Waterfront">
+        </div>
+    </section>
+    
+    <section class="dynamic-info">
+        <h3>Discover More</h3>
+        <button id="showFactsBtn">Show Fun Facts</button>
+        <div id="factsContainer"></div>
+    </section>
+    
+    <section class="audio-section">
+        <h3>Seattle Vibes</h3>
+        <audio controls>
+            <source src="media/audio/seattle-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </section>
 </main>
 
@@ -34,5 +64,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/city.js"></script>
 </body>
 </html>
