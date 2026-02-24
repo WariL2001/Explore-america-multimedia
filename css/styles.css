@@ -53,3 +53,22 @@ footer {
     padding: 15px;
     margin-top: 40px;
 }
+
+.selector {
+    margin-top: 20px;
+}
+
+.selector button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #1e3a5f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.selector button:hover {
+    background-color: #fca311;
+}
