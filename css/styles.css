@@ -163,3 +163,24 @@ main {
         0 25px 55px rgba(0, 0, 0, 0.4),
         0 0 30px rgba(206, 17, 38, 0.6);
 }
+
+/* ============================= */
+/*        FLOATING GIF STYLE     */
+/* ============================= */
+
+.floating-gif {
+    position: fixed;       /* stays in place while scrolling */
+    left: 80px;            /* distance from left side */
+    bottom: 100px;         /* distance from bottom */
+    width: 130px;          /* adjust size if needed */
+    z-index: 1000;         /* keeps it above other content */
+    
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
