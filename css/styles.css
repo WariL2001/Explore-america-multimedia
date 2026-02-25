@@ -52,6 +52,9 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .selector {
@@ -72,6 +75,7 @@ footer {
 .selector button:hover {
     background-color: #fca311;
 }
+
 .hero-video video {
     width: 100%;
     max-height: 400px;
@@ -109,4 +113,53 @@ footer {
 #factsContainer {
     margin-top: 20px;
     font-weight: bold;
+}
+
+
+/* ============================= */
+/*   SAN JUAN PAGE BACKGROUND    */
+/* ============================= */
+
+.sanjuan-page {
+    background-image: url("../Assets/PRflagbeach.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ============================= */
+/*     SAN JUAN SECTION STYLE    */
+/* ============================= */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+/* Base bubble style */
+.sanjuan-title,
+.sanjuan-description {
+    background: rgba(255, 255, 255, 0.9);
+    width: 70%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect with red glow */
+.sanjuan-title:hover,
+.sanjuan-description:hover {
+    transform: translateY(-10px);
+
+    /* Red faded backlight glow */
+    box-shadow: 
+        0 25px 55px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(206, 17, 38, 0.6);
 }
