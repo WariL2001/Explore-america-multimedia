@@ -52,8 +52,6 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 40px;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 
@@ -75,6 +73,10 @@ footer {
 .selector button:hover {
     background-color: #fca311;
 }
+
+/* ============================= */
+/*   SEATTLE RESOURCES    */
+/* ============================= */
 
 .hero-video video {
     width: 100%;
@@ -115,6 +117,63 @@ footer {
     font-weight: bold;
 }
 
+.hero {
+    background: url("../media/images/seattle-main.jpg") center/cover no-repeat;
+
+    width: 100%;
+    min-height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    border-radius: 0;
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.88);
+    padding: 28px 36px;
+    border-radius: 14px;
+    text-align: center;
+    max-width: 650px;
+}
+
+.gallery-grid img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+button {
+    background-color: #0D1B2A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1B263B;
+}
+
+.video-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.video-section video {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 12px;
+}
 
 /* ============================= */
 /*   SAN JUAN PAGE BACKGROUND    */
@@ -127,11 +186,13 @@ footer {
     background-repeat: no-repeat;
 }
 
+
+
 /* ============================= */
 /*     SAN JUAN SECTION STYLE    */
 /* ============================= */
 
-main {
+.sanjuan-page main {
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -23,40 +23,58 @@
 </nav>
 
 <main>
-    <section class="hero-video">
-        <video autoplay muted loop controls>
+
+    <!-- HERO (IMAGEN PRINCIPAL) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Explore Seattle, Washington</h2>
+            <p>Seattle is known for its skyline, coffee culture, and beautiful waterfront views.</p>
+        </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="video-section">
+        <h3>🎥 Seattle in Motion</h3>
+        <video autoplay muted loop playsinline controls>
             <source src="media/video/seattle.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </section>
-    
-    <section class="city-description">
-        <h2>Explore Seattle, Washington</h2>
-        <p>Seattle is known for its skyline, coffee culture, and beautiful waterfront views.</p>
-    </section>
-    
+
+    <!-- GALLERY -->
     <section class="gallery">
         <h3>Top Attractions</h3>
         <div class="gallery-grid">
-            <img src="media/images/space-needle.jpg" alt="Space Needle Seattle">
-            <img src="media/images/pike-place.jpg" alt="Pike Place Market">
-            <img src="media/images/seattle-waterfront.jpg" alt="Seattle Waterfront">
+            <div>
+                <img src="media/images/space-needle.jpg" alt="Space Needle">
+                <p>Space Needle</p>
+            </div>
+            <div>
+                <img src="media/images/pike-place.jpg" alt="Pike Place Market">
+                <p>Pike Place Market</p>
+            </div>
+            <div>
+                <img src="media/images/seattle-waterfront.jpg" alt="Seattle Waterfront">
+                <p>Seattle Waterfront</p>
+            </div>
         </div>
     </section>
-    
+
+    <!-- BUTTON -->
     <section class="dynamic-info">
         <h3>Discover More</h3>
         <button id="showFactsBtn">Show Fun Facts</button>
         <div id="factsContainer"></div>
     </section>
-    
+
+    <!-- AUDIO -->
     <section class="audio-section">
-        <h3>Seattle Vibes</h3>
+        <h3>🎧 Seattle Vibes</h3>
         <audio controls>
             <source src="media/audio/seattle-music.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
         </audio>
     </section>
+
 </main>
 
 <footer>
