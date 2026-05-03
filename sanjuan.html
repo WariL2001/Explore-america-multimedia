@@ -1,62 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore America</title>
+    <title>San Juan – Explore America</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+<body>
 
-<body class="sanjuan-page">
+<a href="#main-content" id="skip-link" class="skip-link">Skip to main content</a>
 
-    <!-- Floating Bad Bunny Frog GIF -->
-<img src="Assets/badbunnyfrog.gif" 
-     alt="Floating Frog GIF" 
-     class="floating-gif">
+<header>
+    <h1>Explore America</h1>
+    <p>Discover your ideal destination</p>
+</header>
 
+<nav aria-label="Main navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="seattle.html">Seattle</a></li>
+        <li><a href="sanjuan.html">San Juan</a></li>
+        <li><a href="planner.html">Planner</a></li>
+    </ul>
+</nav>
 
-    <header>
-        <h1>Explore America</h1>
-        <p>Discover your ideal destination</p>
-    </header>
+<main id="main-content">
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="seattle.html">Seattle</a></li>
-            <li><a href="sanjuan.html">San Juan</a></li>
-            <li><a href="planner.html">Planner</a></li>
-        </ul>
-    </nav>
-
-<main>
-
-    <section class="sanjuan-title">
-        <h2>Explore San Juan, Puerto Rico</h2>
-        <p>Find the perfect destination based on your travel style.</p>
+    <!-- HERO -->
+    <section class="hero sanjuan-hero" aria-label="San Juan beach hero image">
+        <div class="hero-content">
+            <h2>Explore San Juan, Puerto Rico</h2>
+            <p>A Caribbean gem with 500 years of history, vibrant culture, and stunning beaches.</p>
+        </div>
     </section>
 
-    <section class="sanjuan-description">
-        San Juan, Puerto Rico is the vibrant capital and cultural heart of Puerto Rico. 
-        Founded in 1521, it is one of the oldest European-established cities in the Americas. 
-        San Juan blends historic Spanish colonial architecture with modern Caribbean energy.
+    <!-- ABOUT -->
+    <section class="city-about">
+        <h3>About San Juan</h3>
+        <p>
+            San Juan is the vibrant capital and cultural heart of Puerto Rico. Founded in 1521,
+            it is one of the oldest European-established cities in the Americas, blending Spanish
+            colonial architecture with modern Caribbean energy.
+        </p>
+        <p>
+            The city is famous for Old San Juan's colorful buildings, cobblestone streets, and
+            historic forts like Castillo San Felipe del Morro. Visitors enjoy beautiful beaches,
+            lively music, rich cuisine, and a unique mix of Spanish, African, and Taíno influences.
+        </p>
+    </section>
 
-        The city is famous for Old San Juan, with its colorful buildings, cobblestone streets, 
-        and historic forts like Castillo San Felipe del Morro. Visitors enjoy beautiful beaches, 
-        lively music, rich cuisine, and a unique mix of Spanish, African, and Taíno cultural influences.
+    <!-- GALLERY -->
+    <section class="gallery">
+        <h3>Top Attractions</h3>
+        <div class="gallery-grid">
+            <div>
+                <img src="media/images/el-morro.jpg"
+                     alt="Castillo San Felipe del Morro, the historic Spanish fort overlooking the sea in San Juan">
+                <p>El Morro</p>
+            </div>
+            <div>
+                <img src="media/images/old-sanjuan.jpg"
+                     alt="Colorful colonial buildings lining the cobblestone streets of Old San Juan">
+                <p>Old San Juan</p>
+            </div>
+            <div>
+                <img src="media/images/condado-beach.jpg"
+                     alt="Condado Beach with turquoise Caribbean waters and white sand">
+                <p>Condado Beach</p>
+            </div>
+        </div>
+    </section>
 
-        San Juan offers a perfect combination of history, relaxation, nightlife, and tropical beauty — 
-        making it one of the most popular destinations in the Caribbean.
+    <!-- FUN FACTS -->
+    <section class="dynamic-info">
+        <h3>Discover More</h3>
+        <button id="showSJFactsBtn" aria-expanded="false" aria-controls="sjFactsContainer">
+            Show Fun Facts
+        </button>
+        <div id="sjFactsContainer" role="region" aria-live="polite"></div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section style="text-align: center; margin: 40px 0;">
+        <h3>Ready to visit?</h3>
+        <p style="margin: 14px 0 0;">
+            <a href="planner.html" class="rec-link" style="font-size: 1rem; padding: 10px 24px;">
+                Plan Your San Juan Trip &rarr;
+            </a>
+        </p>
     </section>
 
 </main>
 
-    <footer>
-        <p>© 2026 Explore America | CS 430 Project</p>
-    </footer>
+<footer>
+    <p>© 2026 Explore America | CS 430 Project</p>
+    <p><a href="credits.html">Media Credits &amp; Sources</a></p>
+</footer>
 
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
+<script src="js/sanjuan.js"></script>
 </body>
-
 </html>

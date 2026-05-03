@@ -8,13 +8,15 @@
 </head>
 <body>
 
+<a href="#main-content" id="skip-link" class="skip-link">Skip to main content</a>
+
 <header>
     <h1>Explore America</h1>
     <p>Discover your ideal destination</p>
-    <h6>By Wari L, Miguel B and Member 3</h6>
+    <p class="team-credit">By Wari L, Miguel B and Member 3</p>
 </header>
 
-<nav>
+<nav aria-label="Main navigation">
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="seattle.html">Seattle</a></li>
@@ -23,23 +25,31 @@
     </ul>
 </nav>
 
-<main>
+<main id="main-content">
     <section>
         <h2>Find Your Ideal Destination</h2>
         <p>Select your preferred climate:</p>
-    
+
         <div class="selector">
-            <button id="coldBtn">Cold & Urban</button>
-            <button id="warmBtn">Warm & Tropical</button>
+            <button id="coldBtn">Cold &amp; Urban</button>
+            <button id="warmBtn">Warm &amp; Tropical</button>
         </div>
+
+        <div id="recommendationBox" class="recommendation-box" hidden></div>
+
+        <img src="media/gifs/Travel.gif"
+             alt="Animated travel graphic representing exploration"
+             class="luggage-gif">
     </section>
 </main>
 
 <footer>
     <p>© 2026 Explore America | CS 430 Project</p>
+    <p><a href="credits.html">Media Credits &amp; Sources</a></p>
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/quiz.js"></script>
 
 </body>
 </html>

@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore America</title>
+    <title>Trip Planner – Explore America</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+<a href="#main-content" id="skip-link" class="skip-link">Skip to main content</a>
 
 <header>
     <h1>Explore America</h1>
     <p>Discover your ideal destination</p>
 </header>
 
-<nav>
+<nav aria-label="Main navigation">
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="seattle.html">Seattle</a></li>
@@ -22,17 +24,79 @@
     </ul>
 </nav>
 
-<main>
-    <section>
-        <h2>Explore planner</h2>
-        <p>Find the perfect destination based on your travel style.</p>
+<main id="main-content">
+    <section class="planner-section">
+        <h2>Trip Planner</h2>
+        <p>Fill in your preferences and we'll build a personalized itinerary for you.</p>
+
+        <div class="planner-form-wrap" id="plannerFormWrap">
+            <form class="planner-form" id="plannerForm" novalidate>
+
+                <div class="form-group">
+                    <label for="travelerName">Your Name</label>
+                    <input type="text" id="travelerName" name="travelerName"
+                           placeholder="e.g. Alex" autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Destination <span aria-hidden="true">*</span></label>
+                    <select id="destination" name="destination" required aria-required="true">
+                        <option value="">-- Select a city --</option>
+                        <option value="seattle">Seattle, WA</option>
+                        <option value="sanjuan">San Juan, PR</option>
+                    </select>
+                    <span class="error-msg" id="destError" role="alert">Please select a destination.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="numDays">Number of Days <span aria-hidden="true">*</span></label>
+                    <input type="number" id="numDays" name="numDays"
+                           min="1" max="7" placeholder="1 – 7"
+                           required aria-required="true">
+                    <span class="error-msg" id="daysError" role="alert">Please enter a number between 1 and 7.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Budget Level <span aria-hidden="true">*</span></label>
+                    <select id="budget" name="budget" required aria-required="true">
+                        <option value="">-- Select budget --</option>
+                        <option value="budget">Budget (under $100/day)</option>
+                        <option value="moderate">Moderate ($100 – $250/day)</option>
+                        <option value="luxury">Luxury ($250+/day)</option>
+                    </select>
+                    <span class="error-msg" id="budgetError" role="alert">Please select a budget level.</span>
+                </div>
+
+                <div class="form-group">
+                    <label>Interests (select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="interests" value="food"> Food &amp; Dining</label>
+                        <label><input type="checkbox" name="interests" value="nature"> Nature &amp; Outdoors</label>
+                        <label><input type="checkbox" name="interests" value="culture"> Culture &amp; History</label>
+                        <label><input type="checkbox" name="interests" value="nightlife"> Nightlife</label>
+                        <label><input type="checkbox" name="interests" value="shopping"> Shopping</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="generate-btn">Generate My Itinerary</button>
+            </form>
+        </div>
+
+        <div class="itinerary-output" id="itineraryOutput" hidden>
+            <h3 id="itineraryTitle"></h3>
+            <div id="itineraryDays"></div>
+            <div class="budget-tip" id="budgetTip"></div>
+            <button class="reset-btn" id="resetBtn">Plan Another Trip</button>
+        </div>
     </section>
 </main>
 
 <footer>
     <p>© 2026 Explore America | CS 430 Project</p>
+    <p><a href="credits.html">Media Credits &amp; Sources</a></p>
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/planner.js"></script>
 </body>
 </html>

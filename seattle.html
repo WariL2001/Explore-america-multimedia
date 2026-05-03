@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore America</title>
+    <title>Seattle – Explore America</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+<a href="#main-content" id="skip-link" class="skip-link">Skip to main content</a>
 
 <header>
     <h1>Explore America</h1>
     <p>Discover your ideal destination</p>
 </header>
 
-<nav>
+<nav aria-label="Main navigation">
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="seattle.html">Seattle</a></li>
@@ -22,10 +24,10 @@
     </ul>
 </nav>
 
-<main>
+<main id="main-content">
 
-    <!-- HERO (IMAGEN PRINCIPAL) -->
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" aria-label="Seattle hero image">
         <div class="hero-content">
             <h2>Explore Seattle, Washington</h2>
             <p>Seattle is known for its skyline, coffee culture, and beautiful waterfront views.</p>
@@ -35,10 +37,20 @@
     <!-- VIDEO SECTION -->
     <section class="video-section">
         <h3>🎥 Seattle in Motion</h3>
-        <video autoplay muted loop playsinline controls>
+        <!-- FIX: added aria-label and <track> for captions accessibility -->
+        <video autoplay muted loop playsinline controls
+               aria-label="Video tour of Seattle showing city highlights">
             <source src="media/video/seattle.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            <!-- Caption track for accessibility — add a real .vtt file when available -->
+            <!-- <track kind="captions" src="media/captions/seattle.vtt" srclang="en" label="English" default> -->
+            Your browser does not support the video tag. 
+            <a href="media/video/seattle.mp4">Download the Seattle video</a>.
         </video>
+        <!-- Short text description serves as transcript fallback -->
+        <p style="max-width:700px; margin: 12px auto 0; color:#555; font-size:0.9rem;">
+            Video description: An aerial and street-level tour of Seattle, showcasing the Space Needle, 
+            Pike Place Market, the waterfront, and the downtown skyline.
+        </p>
     </section>
 
     <!-- GALLERY -->
@@ -46,39 +58,49 @@
         <h3>Top Attractions</h3>
         <div class="gallery-grid">
             <div>
-                <img src="media/images/space-needle.jpg" alt="Space Needle">
+                <img src="media/images/space-needle.jpg" 
+                     alt="The Space Needle tower in Seattle against a blue sky">
                 <p>Space Needle</p>
             </div>
             <div>
-                <img src="media/images/pike-place.jpg" alt="Pike Place Market">
+                <img src="media/images/pike-place.jpg" 
+                     alt="Pike Place Market entrance sign with crowds of visitors">
                 <p>Pike Place Market</p>
             </div>
             <div>
-                <img src="media/images/seattle-waterfront.jpg" alt="Seattle Waterfront">
+                <img src="media/images/seattle-waterfront.jpg" 
+                     alt="Seattle waterfront with ferries and the Olympic Mountains in the background">
                 <p>Seattle Waterfront</p>
             </div>
         </div>
     </section>
 
-    <!-- BUTTON -->
+    <!-- BUTTON — DOM manipulation -->
     <section class="dynamic-info">
         <h3>Discover More</h3>
-        <button id="showFactsBtn">Show Fun Facts</button>
-        <div id="factsContainer"></div>
+        <button id="showFactsBtn" aria-expanded="false" aria-controls="factsContainer">
+            Show Fun Facts
+        </button>
+        <div id="factsContainer" role="region" aria-live="polite"></div>
     </section>
 
     <!-- AUDIO -->
     <section class="audio-section">
         <h3>🎧 Seattle Vibes</h3>
-        <audio controls>
+        <audio id="seattleAudio" controls aria-label="Background music representing the Seattle atmosphere">
             <source src="media/audio/seattle-music.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
         </audio>
+        <p style="font-size:0.85rem; color:#666; margin-top:8px;">
+            Audio: Ambient instrumental music evoking Seattle's Pacific Northwest atmosphere.
+        </p>
     </section>
 
 </main>
 
 <footer>
     <p>© 2026 Explore America | CS 430 Project</p>
+    <p><a href="credits.html">Media Credits &amp; Sources</a></p>
 </footer>
 
 <script src="js/main.js"></script>
