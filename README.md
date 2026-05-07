@@ -11,7 +11,7 @@ Live site: [https://waril2001.github.io/Explore-america-multimedia/](https://war
 | Name | What they worked on |
 |------|---------------------|
 | Wari L. | Seattle page — gallery, video, audio, multimedia |
-| Miguel B. | San Juan page — background, animations, content |
+| Miguel B. | San Juan page — background, content |
 | Cole Snuffer | Home page and trip planner — quiz logic, form validation |
 
 ---
@@ -20,7 +20,7 @@ Live site: [https://waril2001.github.io/Explore-america-multimedia/](https://war
 
 - You land on the home page and pick Cold & Urban or Warm & Tropical
 - Seattle page has a video, photo gallery, fun facts, and ambient audio
-- San Juan page has a full beach background, animated icon, and top attractions
+- San Juan page has a full beach background, fun facts, birds eye view video, and top attractions
 - The planner lets you build a day-by-day itinerary based on your travel style, trip length, and budget
 - There is also an About page, Contact form, and a Credits page with all media sources cited
 
